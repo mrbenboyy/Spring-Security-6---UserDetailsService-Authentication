@@ -1,13 +1,7 @@
-<h1>Spring MVC - Gestion des Patients</h1>
-<p>Affichage de la liste avec pagination</p>
-<img src="images/pic1.PNG"/>
-<p>Ajout d'un patient</p>
-<img src="images/pic2.PNG"/>
-<p>Chercher un patient</p>
-<img src="images/pic3.PNG"/>
-<p>Suppression d'un patient</p>
-<img src="images/pic4.PNG"/>
-<p>Modification</p>
-<img src="images/pic5.PNG"/>
-<p>Base de donées MySQL</p>
-<img src="images/pic6.PNG"/>
+<h1>Spring Security 6 - InMemoryAuthentication</h1>
+<p>Login page</p>
+<img src="images/login_page.PNG"/>
+<p>Masquer les actions</p>
+<img src="images/hide_actions.PNG"/>
+<p>Not Authorized</p>
+<img src="images/not_authorized.PNG"/>
