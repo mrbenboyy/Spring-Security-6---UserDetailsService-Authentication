@@ -2,6 +2,7 @@ package ma.mundiapolis.patientmvc;
 
 import ma.mundiapolis.patientmvc.entities.Patient;
 import ma.mundiapolis.patientmvc.repositories.PatientRepository;
+import ma.mundiapolis.patientmvc.security.service.AccountService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -35,7 +36,7 @@ public class PatientMvcApplication {
         };
     }
 
-    @Bean
+    //@Bean
     CommandLineRunner commandLineRunner(JdbcUserDetailsManager jdbcUserDetailsManager){
         PasswordEncoder passwordEncoder = passwordEncoder();
         return args->{
@@ -54,6 +55,22 @@ public class PatientMvcApplication {
                 jdbcUserDetailsManager.createUser(
                     User.withUsername("admin2").password(passwordEncoder.encode("1234")).roles("USER", "ADMIN").build()
             );
+        };
+    }
+
+    //@Bean
+    CommandLineRunner commandLineRunnerUserDetails(AccountService accountService){
+        return args -> {
+            accountService.addNewRole("USER");
+            accountService.addNewRole("ADMIN");
+            accountService.addNewUser("user10", "1234", "user10@gmail.com", "1234");
+            accountService.addNewUser("user20", "1234", "user20@gmail.com", "1234");
+            accountService.addNewUser("admin3", "1234", "admin3@gmail.com", "1234");
+
+            accountService.addRoleToUser("user10", "USER");
+            accountService.addRoleToUser("user20", "USER");
+            accountService.addRoleToUser("admin3", "USER");
+            accountService.addRoleToUser("admin3", "ADMIN");
         };
     }
 

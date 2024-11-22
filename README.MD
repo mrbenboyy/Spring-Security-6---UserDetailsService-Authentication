@@ -5,7 +5,9 @@
 <img src="images/hide_actions.PNG"/>
 <p>Not Authorized</p>
 <img src="images/not_authorized.PNG"/>
-<p>Table users</p>
-<img src="images/table_users.PNG"/>
-<p>Table authorities</p>
-<img src="images/table_authorities.PNG"/>
+<p>Table app users</p>
+<img src="images/table_app_user.PNG"/>
+<p>Table app roles</p>
+<img src="images/table_app_roles.PNG"/>
+<p>Table app user with roles</p>
+<img src="images/table_app_user_role.PNG"/>
